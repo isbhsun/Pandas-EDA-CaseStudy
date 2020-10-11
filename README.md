@@ -3,7 +3,7 @@
 #### Isabella Sun and Josh Bernd
 
 ## Introduction
-In this exploratory data analysi, we examined the Trending YouTube Video Statistics data. Specifically, we were interested in different measures of engagement on trending YouTube videos. 
+In this exploratory data analysis, we examined the Trending YouTube Video Statistics data. Specifically, we were interested in different measures of engagement on trending YouTube videos. 
 
 ## Data Description
 The data describe a set of top-trending videos on the YouTube platform by various countries. The countries included in our analysis are:
@@ -27,6 +27,9 @@ The main information included in the data were:
     - Number of comments
     
 Since our focus for this project was engagement rates, our three most important variables were likes, dislikes, and comments. To normalize engagement rates, we divided the total number of likes and dislikes by the number of views, and the number of comments by the number of views. The data are based on daily top trending YouTube videos, so a video that is trending for multiple days will appear multiple times in the data. We examined the engagement and views for the most recent date that a video was trending. 
+
+The data are available for download from Kaggle [here](https://www.kaggle.com/datasnaek/youtube-new)
+
 
 ### Missing/Excluded Data
 For the purposes of this project we removed any observations where comments and/or likes and dislikes were disabled for the video and any videos that had an error or were removed from our analysis. In total, there were only 23 videos that were removed or had an error in the US dataset and 696 videos with comments or likes disabled in the US dataset. 
@@ -53,7 +56,7 @@ Below we have the top 10 videos with the highest likes and dislikes per view. It
 |  9 | THINGS THAT ARE LOWER                          |                  0.163864 |
 | 10 | From Dream to Reality                          |                  0.160991 |
 
-Below we present the top 10 videos with the highes comments per view. They appear to commonly be makeup related content as opposed to music related content. 
+Below we present the top 10 videos with the highest comments per view. They appear to commonly be makeup related content as opposed to music related content. 
 
 |    | Video Title                                                |   Comments/View     |
 |---:|:-----------------------------------------------------------|--------------------:|
@@ -72,7 +75,7 @@ The differing sets of videos that rank the highest by the two definitions of eng
 
 Looking at the top 10 channels with the highest rates of likes/dislikes per view and the top 10 channels with the highest comments per view, we see a similar pattern to the top videos by engagement type. There is no overlap between the two sets of top 10 channels using different measures of engagement. This further supports the observation that high levels of engagement in the form of likes and dislikes is not necessarily indicative of high rates of commenting. 
 
-|    | Channel.         |   Likes and dislikes/view |
+|    | Channel         |   Likes and dislikes/view |
 |---:|:-----------------|--------------------------:|
 |  1 | Daily Caller     |                  0.197397 |
 |  2 | Desimpedidos     |                  0.189541 |
@@ -85,7 +88,7 @@ Looking at the top 10 channels with the highest rates of likes/dislikes per view
 |  9 | Smyang Piano     |                  0.137142 |
 | 10 | Henry Prince Mak |                  0.128749 |
 
-|    | Channel                 |  Comments/view.     |
+|    | Channel                 |  Comments/view     |
 |---:|:------------------------|--------------------:|
 |  1 | Manny Mua               |           0.0494561 |
 |  2 | GingerPale              |           0.0422106 |
@@ -104,7 +107,7 @@ This figure shows the frequency of videos with different engagement rates. From 
 
 #### Relationship between the different measures of engagement
 
-We also examined the realtionship between the measures of engagement. The correlation between likes and dislikes per view and comments per view is **0.44**
+We also examined the relationship between the measures of engagement. The correlation between likes and dislikes per view and comments per view is **0.44**
 
 However, we might observe a stronger relationship if we were to remove the outliers as it appears that there are a number of videos with high levels of commenting.
 
@@ -112,7 +115,7 @@ However, we might observe a stronger relationship if we were to remove the outli
 
 ### Engagement Rates by County
 
-Exploring the relationship between the two measures of engagement by country also appears to show only a weak relationship between a video getting likes/dislikes or getting comments. Where most countries see a few outliers either in the direction of high rates of commenting but low rates of liking/disling or high rates of liking/disliking but low rates of commenting. The exception is in India where it appears that the viral videos with exceptional rates of likes/dislikes also garner higher rates of commenting as well. 
+Exploring the relationship between the two measures of engagement by country also appears to show only a weak relationship between a video getting likes/dislikes or getting comments. Where most countries see a few outliers either in the direction of high rates of commenting but low rates of liking/disliking or high rates of liking/disliking but low rates of commenting. The exception is in India where it appears that the viral videos with exceptional rates of likes/dislikes also garner higher rates of commenting as well. 
 
 ![alt text](images/country_engagement_scat.png "Title") 
 
